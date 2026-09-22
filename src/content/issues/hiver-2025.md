@@ -1,7 +1,7 @@
 ---
 title: été 2026
-season: hiver
-year: 2025
+season: été
+year: 2026
 publishDate: 2026-09-21
 description: "Numéro zéro : prolégomènes à une critique de la crise permanente."
 ---
