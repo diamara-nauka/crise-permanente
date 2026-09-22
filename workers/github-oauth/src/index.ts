@@ -1,17 +1,29 @@
 export interface Env {
-  GITHUB_CLIENT_ID: string;
-  GITHUB_CLIENT_SECRET: string;
+  GITHUB_PAT?: string;
+  GITHUB_CLIENT_ID?: string;
+  GITHUB_CLIENT_SECRET?: string;
 }
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    // Endpoint 1 : Début du flux OAuth (/auth)
-    // Redirige vers GitHub avec le client_id et les scopes nécessaires (repo)
+    // Endpoint 1 : /auth
+    // Si GITHUB_PAT est configuré, on connecte directement l'utilisateur SANS compte GitHub !
     if (url.pathname === '/auth') {
+      if (env.GITHUB_PAT) {
+        return renderHandshake({
+          status: 'success',
+          content: JSON.stringify({
+            token: env.GITHUB_PAT,
+            provider: 'github',
+          }),
+        });
+      }
+
+      // Fallback si on souhaite utiliser le flux OAuth standard
       if (!env.GITHUB_CLIENT_ID) {
-        return new Response('GITHUB_CLIENT_ID manquant dans l’environnement.', { status: 500 });
+        return new Response('Aucune méthode d’authentification configurée (GITHUB_PAT ou GITHUB_CLIENT_ID).', { status: 500 });
       }
 
       const scope = url.searchParams.get('scope') || 'repo';
@@ -23,8 +35,7 @@ export default {
       return Response.redirect(authUrl.toString(), 302);
     }
 
-    // Endpoint 2 : Callback GitHub (/callback)
-    // Reçoit le code, l'échange contre un token, et renvoie le handshake Decap CMS
+    // Endpoint 2 : Callback GitHub OAuth (fallback)
     if (url.pathname === '/callback') {
       const code = url.searchParams.get('code');
       const error = url.searchParams.get('error');
@@ -61,7 +72,6 @@ export default {
           });
         }
 
-        // Succès : envoi du token dans le format attendu par Decap CMS
         return renderHandshake({
           status: 'success',
           content: JSON.stringify({
@@ -77,9 +87,8 @@ export default {
       }
     }
 
-    // Route racine d'information
     return new Response(
-      'Cloudflare Worker OAuth GitHub pour Decap CMS opérationnel. Endpoints disponibles: /auth et /callback.',
+      'Cloudflare Worker OAuth / Token Provider pour Decap CMS opérationnel.',
       {
         status: 200,
         headers: { 'Content-Type': 'text/plain; charset=utf-8' },
@@ -99,11 +108,10 @@ function renderHandshake(result: { status: 'success' | 'error'; content: string 
   <title>Authentification Decap CMS</title>
 </head>
 <body>
-  <p>Authentification en cours, cette fenêtre va se fermer...</p>
+  <p>Connexion en cours, cette fenêtre va se fermer...</p>
   <script>
     (function() {
       function receiveMessage(e) {
-        console.log("receiveMessage %o", e);
         window.opener.postMessage(
           'authorization:github:${result.status}:${result.content}',
           e.origin
@@ -111,7 +119,6 @@ function renderHandshake(result: { status: 'success' | 'error'; content: string 
         window.removeEventListener("message", receiveMessage, false);
       }
       window.addEventListener("message", receiveMessage, false);
-      console.log("Handshake en attente d'autorisation de l'initiateur...");
       window.opener.postMessage("authorizing:github", "*");
     })();
   </script>
