@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Revue trimestrielle de réflexion politique, sociale et culturelle." } = Astro.props;
+const siteTitle = "Crise Permanente";
+const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div>
+          <a href="/" class="site-logo">Crise Permanente</a>
+          <span class="site-subtitle">Revue trimestrielle</span>
+        </div>
+        <nav class="site-nav">
+          <a href="/">Numéros</a>
+          <a href="/admin/" target="_blank" rel="noopener noreferrer">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div>
+          <strong>Crise Permanente</strong> — Pensée critique du temps présent.
+        </div>
+        <div>
+          Publié via <a href="https://pages.cloudflare.com/" target="_blank" rel="noreferrer">Cloudflare Pages</a> & <a href="/admin/">Decap CMS</a>.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

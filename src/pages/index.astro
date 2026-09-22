@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const issues = await getCollection('issues');
+// Tri du plus récent au plus ancien par date de publication
+const sortedIssues = issues.sort(
+  (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
+);
+---
+
+<BaseLayout title="Crise Permanente">
+  <section class="hero-section">
+    <h1 class="hero-title">Crise Permanente</h1>
+    <p class="hero-description">
+      Revue trimestrielle de critique sociale, politique et écologique. Chroniques d'une époque qui a érigé l'urgence en méthode de gouvernement.
+    </p>
+  </section>
+
+  <section>
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.4rem; letter-spacing: 0.08em; text-transform: uppercase;">
+        Numéros parus
+      </h2>
+      <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.1em;">
+        {sortedIssues.length} publication{sortedIssues.length > 1 ? 's' : ''}
+      </span>
+    </div>
+
+    <div class="issues-grid">
+      {sortedIssues.map((issue) => (
+        <article class="issue-card">
+          <div>
+            <div class="issue-card-meta">
+              <span>Année {issue.data.year}</span>
+              <span>•</span>
+              <span style="text-transform: capitalize;">{issue.data.season}</span>
+            </div>
+            <h3 class="issue-card-title">{issue.data.title}</h3>
+            {issue.data.description && (
+              <p class="issue-card-desc">{issue.data.description}</p>
+            )}
+          </div>
+          <div>
+            <a href={`/numeros/${issue.id}`} class="issue-card-link">
+              Consulter le numéro →
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

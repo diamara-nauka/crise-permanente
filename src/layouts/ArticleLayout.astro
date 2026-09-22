@@ -1,0 +1,51 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+  issueSlug: string;
+  issueTitle: string;
+  author?: string;
+}
+
+const { title, description, publishDate, issueSlug, issueTitle, author } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(publishDate);
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="article-reader">
+    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <a href={`/numeros/${issueSlug}`}>{issueTitle}</a>
+      <span>/</span>
+      <span aria-current="page">Article</span>
+    </nav>
+
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime={publishDate.toISOString()}>{formattedDate}</time>
+        {author && <span> • Par {author}</span>}
+      </div>
+      <h1 class="article-title">{title}</h1>
+      <p class="article-chapo">{description}</p>
+    </header>
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    <footer style="margin-top: 3.5rem; border-top: 1px solid var(--color-border); padding-top: 2rem;">
+      <a href={`/numeros/${issueSlug}`} class="back-link">
+        ← Retour au numéro {issueTitle}
+      </a>
+    </footer>
+  </article>
+</BaseLayout>

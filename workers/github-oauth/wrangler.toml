@@ -1,0 +1,8 @@
+name = "crise-permanente-oauth"
+main = "src/index.ts"
+compatibility_date = "2024-09-01"
+
+# Les variables sensibles GITHUB_CLIENT_ID et GITHUB_CLIENT_SECRET
+# doivent être enregistrées avec :
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET

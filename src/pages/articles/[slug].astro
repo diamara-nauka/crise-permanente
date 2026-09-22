@@ -1,0 +1,43 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getCollection, getEntry, render, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+
+  return Promise.all(
+    articles.map(async (article) => {
+      // Résolution de l'issue référencée
+      const issue = await getEntry('issues', article.data.issue.id);
+      return {
+        params: { slug: article.id },
+        props: {
+          article,
+          issueTitle: issue ? issue.data.title : 'Numéro',
+          issueSlug: issue ? issue.id : article.data.issue.id,
+        },
+      };
+    })
+  );
+}
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  issueTitle: string;
+  issueSlug: string;
+}
+
+const { article, issueTitle, issueSlug } = Astro.props;
+const { Content } = await render(article);
+---
+
+<ArticleLayout
+  title={article.data.title}
+  description={article.data.description}
+  publishDate={article.data.publishDate}
+  issueSlug={issueSlug}
+  issueTitle={issueTitle}
+  author={article.data.author}
+>
+  <Content />
+</ArticleLayout>

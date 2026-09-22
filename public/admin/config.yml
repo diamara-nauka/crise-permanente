@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: your-username/crise-permanente # À remplacer par votre repo GitHub (ex: orga/crise-permanente)
+  branch: main
+  base_url: https://crise-permanente-oauth.workers.dev # URL de votre Cloudflare Worker OAuth
+  auth_endpoint: auth
+
+# Configuration générale
+locale: "fr"
+publish_mode: simple
+display_url: https://crisepermanente.fr
+
+collections:
+  - name: "issues"
+    label: "Numéros"
+    label_singular: "Numéro"
+    folder: "src/content/issues"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    editor:
+      preview: false
+    fields:
+      - { label: "Titre du numéro", name: "title", widget: "string", hint: "Ex: Printemps 2026" }
+      - label: "Saison"
+        name: "season"
+        widget: "select"
+        options: ["printemps", "été", "automne", "hiver"]
+      - { label: "Année", name: "year", widget: "number", value_type: "int" }
+      - { label: "Date de publication", name: "publishDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Description / Édito court", name: "description", widget: "text", required: false }
+      - { label: "Texte de présentation", name: "body", widget: "markdown", required: false }
+
+  - name: "articles"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "src/content/articles"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    editor:
+      preview: false
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Chapeau / Description", name: "description", widget: "text" }
+      - { label: "Date de publication", name: "publishDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - label: "Numéro de rattachement"
+        name: "issue"
+        widget: "relation"
+        collection: "issues"
+        search_fields: ["title", "year"]
+        value_field: "{{slug}}"
+        display_fields: ["title"]
+      - { label: "Auteur(e)", name: "author", widget: "string", required: false }
+      - { label: "Corps de l'article (Markdown)", name: "body", widget: "markdown" }
