@@ -1,8 +1,8 @@
 ---
-title: "Hiver 2025"
-season: "hiver"
+title: été 2026
+season: hiver
 year: 2025
-publishDate: 2025-12-21
+publishDate: 2026-09-21
 description: "Numéro zéro : prolégomènes à une critique de la crise permanente."
 ---
 
