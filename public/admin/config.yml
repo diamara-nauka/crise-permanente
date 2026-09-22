@@ -2,7 +2,7 @@ backend:
   name: github
   repo: your-username/crise-permanente # À remplacer par votre repo GitHub (ex: orga/crise-permanente)
   branch: main
-  base_url: https://crise-permanente-oauth.workers.dev # URL de votre Cloudflare Worker OAuth
+  base_url: https://crise-permanente-oauth.diamara-nauka.workers.dev # URL de votre Cloudflare Worker OAuth
   auth_endpoint: auth
 
 # Configuration générale
