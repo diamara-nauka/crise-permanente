@@ -3,7 +3,7 @@ title: L’ Edito de Michael Kuck
 description: Quand la gestion des crises successives remplace le débat
   démocratique ordinaire.
 publishDate: 2026-03-22
-issue: printemps-2026
+issue: hiver-2025
 author: Rédaction Crise Permanente
 ---
 # Edito : Je n’ai rien à vous dire et je ne veux pas vous parler
