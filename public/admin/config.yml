@@ -9,6 +9,8 @@ backend:
 locale: "fr"
 publish_mode: simple
 display_url: https://crisepermanente.fr
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "issues"
