@@ -10,4 +10,4 @@ description: >-
 publishDate: 2026-09-21
 issue: hiver-2025
 ---
-![Larry, il vient de toucher la nuit]( "Larry")
+![Larry, il vient de toucher la nuit](/uploads/larry_.png "Larry")
