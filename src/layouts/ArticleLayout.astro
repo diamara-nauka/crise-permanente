@@ -20,30 +20,37 @@ const formattedDate = new Intl.DateTimeFormat('fr-FR', {
 ---
 
 <BaseLayout title={title} description={description}>
-  <article class="article-reader">
-    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
-      <a href="/">Accueil</a>
+  <article class="max-w-2xl mx-auto bg-[#2d0409]/85 border border-white/20 rounded-2xl p-6 sm:p-12 shadow-2xl">
+    <nav class="flex items-center gap-2 font-sans text-xs tracking-wider uppercase text-white/60 mb-8" aria-label="Fil d'Ariane">
+      <a href="/" class="hover:text-white transition-colors">Accueil</a>
       <span>/</span>
-      <a href={`/numeros/${issueSlug}`}>{issueTitle}</a>
+      <a href={`/numeros/${issueSlug}`} class="hover:text-white transition-colors">{issueTitle}</a>
       <span>/</span>
-      <span aria-current="page">Article</span>
+      <span class="text-white" aria-current="page">Article</span>
     </nav>
 
-    <header class="article-header">
-      <div class="article-meta">
+    <header class="mb-10 pb-8 border-b border-white/20">
+      <div class="font-sans text-xs uppercase tracking-widest text-white/60 mb-3">
         <time datetime={publishDate.toISOString()}>{formattedDate}</time>
         {author && <span> • Par {author}</span>}
       </div>
-      <h1 class="article-title">{title}</h1>
-      <p class="article-chapo">{description}</p>
+      <h1 class="font-heading text-3xl sm:text-4xl font-bold mb-4 leading-tight">
+        {title}
+      </h1>
+      <p class="font-serif text-lg sm:text-xl italic text-white/80 leading-relaxed">
+        {description}
+      </p>
     </header>
 
-    <div class="prose">
+    <div class="font-serif text-lg leading-relaxed text-white/95 space-y-6 [&_h2]:font-heading [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-3 [&_h2]:border-b [&_h2]:border-white/20 [&_h2]:pb-2 [&_h3]:font-heading [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-2 [&_blockquote]:border-l-4 [&_blockquote]:border-white [&_blockquote]:pl-4 [&_blockquote]:my-6 [&_blockquote]:italic [&_blockquote]:text-xl [&_blockquote]:text-white/90 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2">
       <slot />
     </div>
 
-    <footer style="margin-top: 3.5rem; border-top: 1px solid var(--color-border); padding-top: 2rem;">
-      <a href={`/numeros/${issueSlug}`} class="back-link">
+    <footer class="mt-12 pt-8 border-t border-white/20">
+      <a
+        href={`/numeros/${issueSlug}`}
+        class="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest font-semibold px-4 py-2 rounded border border-white/20 bg-white/10 hover:bg-white/20 transition-colors"
+      >
         ← Retour au numéro {issueTitle}
       </a>
     </footer>

@@ -23,29 +23,47 @@ const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
   </head>
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
+  <body class="min-h-screen flex flex-col text-white">
+    <header class="sticky top-0 z-50 border-b border-white/20 bg-[#db142c]/90 backdrop-blur-md">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <div>
-          <a href="/" class="site-logo">Crise Permanente</a>
+          <a href="/" class="font-heading text-xl font-bold tracking-widest uppercase hover:opacity-90 transition-opacity">
+            Crise Permanente
+          </a>
+          <span class="block font-sans text-xs uppercase tracking-[0.2em] text-white/60 mt-0.5">
+            Revue trimestrielle
+          </span>
         </div>
-        <nav class="site-nav">
-          <a href="/">Numéros</a>
+        <nav class="flex items-center gap-4">
+          <a
+            href="/"
+            class="font-sans text-xs uppercase tracking-widest font-semibold px-3 py-1.5 rounded border border-transparent hover:border-white/25 hover:bg-white/10 transition-colors"
+          >
+            Numéros
+          </a>
+          <a
+            href="/admin/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-sans text-xs uppercase tracking-widest font-semibold px-3 py-1.5 rounded border border-white/25 bg-white/10 hover:bg-white/20 transition-colors"
+          >
+            Admin
+          </a>
         </nav>
       </div>
     </header>
 
-    <main class="main-container">
+    <main class="flex-1 max-w-5xl w-full mx-auto px-6 py-12">
       <slot />
     </main>
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
+    <footer class="border-t border-white/20 bg-[#2d0409]/90 backdrop-blur px-6 py-8 font-sans text-xs text-white/80">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
         <div>
-          <strong>Crise Permanente</strong> — Pensée critique du temps présent.
+          <strong class="text-white">Crise Permanente</strong> — Pensée critique du temps présent.
         </div>
-        <div>
-          Publié via <a href="https://pages.cloudflare.com/" target="_blank" rel="noreferrer">Cloudflare Pages</a> & <a href="/admin/">Decap CMS</a>.
+        <div class="text-white/60">
+          Revue propulsée par Cloudflare Workers & Decap CMS.
         </div>
       </div>
     </footer>
