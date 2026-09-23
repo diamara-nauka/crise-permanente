@@ -1,35 +1,56 @@
 # Crise Permanente — Revue en ligne
 
-Site web statique et revue trimestrielle développée avec Astro, Decap CMS et Cloudflare.
-
-## Architecture
-
-- **Moteur SSG** : [Astro](https://astro.build/) avec Content Collections (`issues` & `articles`)
-- **Design & Style** : Vanilla CSS avec variables custom (`#db142c` rouge, blanc, nuances de rouge profond)
-- **Hébergement** : [Cloudflare Pages](https://pages.cloudflare.com/)
-- **CMS** : [Decap CMS](https://decapcms.org/) (anciennement Netlify CMS) avec backend GitHub
-- **OAuth** : Cloudflare Worker autonome (`workers/github-oauth`)
-- **Sécurité Admin** : Cloudflare Access (Zero Trust) protégeant uniquement `/admin/*`
+Revue trimestrielle de critique sociale, politique et culturelle, développée avec Astro et Decap CMS, hébergée sur **Cloudflare Workers avec Static Assets**.
 
 ---
 
-## Démarrage rapide
+## Architecture unifiée (Workers + Static Assets)
+
+- **Moteur SSG** : [Astro](https://astro.build/) avec Content Collections (`issues` & `articles`)
+- **Admin CMS** : [Decap CMS](https://decapcms.org/) dans `public/admin/`
+- **Hébergement & Backend** : Cloudflare Worker unifié (`wrangler.jsonc`) :
+  - `ASSETS` : sert le site statique et `/admin/` depuis `./dist`
+  - Routes `/auth` et `/callback` : authentification instantanée Decap CMS via `GITHUB_PAT`
+- **Sécurité Admin** : Cloudflare Access (Zero Trust) protégeant l'accès à `/admin*`
+
+---
+
+## Commandes locales
 
 ```bash
 # Installer les dépendances
 npm install
 
-# Démarrer le serveur de développement local
+# Démarrer Astro en dev
 npm run dev
 
-# Compiler pour la production
+# Compiler le site statique
 npm run build
+
+# Tester en local avec l'environnement Cloudflare Worker + Assets
+npx wrangler dev
 ```
 
 ---
 
-## Documentation et déploiement
+## Déploiement sur Cloudflare
 
-- 📖 [Guide de création de la GitHub OAuth App](docs/GITHUB_OAUTH_APP.md)
-- 🔒 [Guide de sécurisation Cloudflare Access pour /admin](docs/CLOUDFLARE_ACCESS.md)
-- 🚀 [Guide de déploiement sur Cloudflare Pages](docs/DEPLOY_CLOUDFLARE_PAGES.md)
+### 1. Configurer le secret GitHub PAT dans Cloudflare
+Le secret est maintenant rattaché directement au projet Cloudflare `crise-permanente` :
+
+```bash
+npx wrangler secret put GITHUB_PAT
+# (Collez votre fine-grained personal access token GitHub)
+```
+
+### 2. Déployer
+```bash
+npm run deploy
+```
+*(ou simplement `git push` si vous avez configuré le déploiement continu Cloudflare Workers).*
+
+---
+
+## Documentation
+
+- 🔒 [Guide Cloudflare Access (/admin)](docs/CLOUDFLARE_ACCESS.md)
