@@ -1,13 +1,12 @@
 ---
 title: Sur la crise et son caractère permanent
-description: comment ça la crise ?
+description: La lectrice aura reconnu la contrepèterie avec le concept de
+  révolution permanente de Trotsky, le lecteur je l’emmerde. Mais que se
+  cache-t-il derrière le titre de notre revue ?
 publishDate: 2026-06-01
 issue: printemps-2026
+author: Vera Paolini
 ---
-> La lectrice aura reconnu la contrepèterie avec le concept de révolution permanente de Trotsky, le lecteur je l’emmerde. Mais que se cache derrière le titre de notre revue ?
->
-> Vera Paolini 
-<br><br>
 Si vous lisez *Crise Permanente* c’est que vous subissez la crise : crise du logement, crise écolo, crise du pétrole, crise de l’emploi, crise d’ado, crise de la quarantaine précoce, crise existentielle, crise de dysphorie, crise de nerfs, crise d’angoisse, crise de régime, crise de *Position Revue*, crise économique structurelle, crise du droit international, crise de la dette, crise de l’Extrême-Gauche internationale.
 <br><br>
 Notre vie est rythmée par les crises. J’avais 8 ans au moment de la crise des Subprimes, je n’ai pas vraiment connu le monde avant crise, je me souviens simplement que nous allions un peu plus souvent au Buffalo Grill de la zone commerciale de La Glacerie (aujourd’hui commune déléguée de Cherbourg-en-Cotentin). À *Crise Permanente*, nous sommes tous des enfants de la crise, nous n’avons pas vraiment de souvenirs d’enfance heureux, et nous savons que nous ne sommes pas les seuls.
