@@ -1,9 +1,9 @@
 ---
-title: "Manifeste pour une revue du temps long"
-description: "Pourquoi fonder une revue trimestrielle à l'ère de l'instantanéité numérique."
+title: Pourquoi une revue de plus ?
+description: Pourquoi fonder une revue trimestrielle à l'ère de l'instantanéité numérique.
 publishDate: 2026-06-06
-issue: "printemps-2026"
-author: "Le comité de rédaction"
+issue: printemps-2026
+author: Le comité de rédaction
 ---
 
 ## Pourquoi une revue de plus ?
