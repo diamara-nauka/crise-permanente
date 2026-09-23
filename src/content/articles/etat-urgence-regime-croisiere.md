@@ -1,17 +1,17 @@
 ---
-title: L’ Edito de Michael Kuck
-description: Quand la gestion des crises successives remplace le débat
-  démocratique ordinaire.
+title: "L’ Edito de Michael Kuck : Je n’ai rien à vous dire et je ne veux pas
+  vous parler"
+description: "En cette deuxième revue de Crise Permanente, je suis dores et déjà
+  confronté au problème de la page blanche. Cette panne moteur me pousse à
+  réfléchir aux grandes orientations de nos missions en tant qu’éditorialistes.
+  Qui sommes-nous dans cette société où l’avis est si multiple ? Quelle place
+  occuper dans cette cour de journalopes ? Ma conclusion est simple : je n’ai
+  rien à vous dire et je ne veux pas vous parler parce que je suis pas un enculé
+  de journaleux."
 publishDate: 2026-03-22
 issue: hiver-2025
-author: Rédaction Crise Permanente
+author: Michael Kuck
 ---
-# Edito : Je n’ai rien à vous dire et je ne veux pas vous parler
-
-En cette deuxième revue de Crise Permanente, je suis dores et déjà confronté au problème de la page blanche. Cette panne moteur me pousse à réfléchir aux grandes orientations de nos missions en tant qu’éditorialistes. Qui sommes-nous dans cette société où l’avis est si multiple ? Quelle place occuper dans cette cour de journalopes ? Ma conclusion est simple : je n’ai rien à vous dire et je ne veux pas vous parler parce que je suis pas un enculé de journaleux.
-
-Michael Kuck
-
 ## Le vide à combler
 
 Quand on est éditorialiste, on doit se soumettre à un principe simple : tout dire et ne rien dire, mais surtout le dire le plus mal possible. Tout ce qu’on dira doit être malhonnête, infondé, agressif et profondément délétère pour l’opinion publique et la santé mentale. C’est à peu ou prou les raisons qui ont motivé la création de Crise Permanente, car être imbuvable est un loisir que l’on ne peut laisser raisonnablement dans les mains des bourgeois.
@@ -22,7 +22,7 @@ Si vous nous lisez, c’est que vous aimez ça et que vous êtes comme nous.
 
 Et c’est pour ça qu’on vous aime et qu’on se déteste.
 
-## « L’Esprit Crise » 
+## « L’Esprit Crise »
 
 Vous qui connaissez désormais nos méthodes, vous êtes imprégnés de « l’Esprit Crise », l’esprit profondément aigre et méchant qui a fait les grandes heures d’Hara-Kiri. L’esprit de la revue qui assume ouvertement d’être un dépotoir des idées, un rivage sordide où viennent s’échouer toutes les opinions mises au monde par le ressentiment, la haine ou le dégoût. L’esprit de la revue qui veut insulter ses lecteurs et insulter sa rédaction parce qu’on est des cons, des incapables, des médiocres. L’esprit d’une revue où on laisse sortir le pire de nous-même car nous ne sommes que le reflet du pire chez vous-même. L’esprit d’une revue qui accepte tout ce qu’il faut faire pour être le plus désagréable au plus de gens possible. 
 
