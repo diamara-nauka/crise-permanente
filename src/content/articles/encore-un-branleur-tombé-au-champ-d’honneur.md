@@ -18,11 +18,11 @@ Les *gooners*, à l’origine, sont les fans du club d’Arsenal. Le célèbre 
 
 Petits joueurs que nous sommes, on sous-estime grandement le but profond du *gooner*.
 
-`<br><br>`
+<br><br>
 
 # Pougnette existentielle et humiliation permanente
 
-`<br><br>`
+<br><br>
 
 Je suis tombé dans le trou de lapin du contenu gooner. Sur X (anciennement Twitter, NdlR), les comptes dédiés abondent selon les petites inclinaisons de chacun et rien n’est épargné. Ce que j’en ai toutefois retenu me donne un schéma structurel de ce que les gooners recherchent.
 
