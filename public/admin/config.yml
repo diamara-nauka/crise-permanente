@@ -2,7 +2,7 @@ backend:
   name: github
   repo: diamara-nauka/crise-permanente
   branch: master
-  base_url: ""
+  base_url: https://crise-permanente.diamara-nauka.workers.dev
   auth_endpoint: auth
 
 # Configuration générale
