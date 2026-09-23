@@ -16,13 +16,11 @@ Les *gooners*, à l’origine, sont les fans du club d’Arsenal. Le célèbre 
 
 *Goon*, *gooned*, *goonen*. Le lingo commun a décidé d’en faire un synonyme de « se pignoler » en ignorant l’arrière-plan psychologique et politique d’une pratique marginale. Les hédonistes lubriques s’adonnant à ce rite ne se polissent pas le jonc pour le simple accomplissement de la besogne, c’est un objectif de vie. Dans chaque mouvement, le *gooner* cherche l’abrutissement complet et la recherche de dopamine pure. Le *gooner* ne recule devant rien ni personne. Ni le précieux temps de la vie ni les notions de dignité ne l’empêchent de courir éperdument derrière ce plaisir si simple d’accès. La pratique la plus extrême de ce *kink* pousse l’existence dans ses retranchements, certains allant jusqu’à huit ou dix heures d’astiquage de tige. Qui peut s’asseoir en face de ces prodiges avec sa petite pignole de 15 minutes entre le petit-déjeuner et le *doomscroll* ?
 
-<br><br>
-
 Petits joueurs que nous sommes, on sous-estime grandement le but profond du *gooner*.
 
 <br><br>
 
-## Pougnette existentielle et humiliation permanente
+# Pougnette existentielle et humiliation permanente
 
 <br><br>
 
@@ -54,7 +52,7 @@ Tout cela devrait vous répugner et c’est ce qui leur fait plaisir, offrons le
 
 <br><br>
 
-## Haro sur les mots !
+# Haro sur les mots !
 
 <br><br>
 
