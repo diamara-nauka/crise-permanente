@@ -3,7 +3,7 @@ title: Pourquoi une revue de plus ?
 description: "Dans une ère de commentariat interminable et de blabla incapable,
   on est en droit de se demander : pourquoi une revue de plus ? C’est la
   question à laquelle je me propose de répondre."
-publishDate: 2026-06-06
+publishDate: 2026-06-21
 issue: printemps-2026
 author: "Vera Paolini "
 ---
