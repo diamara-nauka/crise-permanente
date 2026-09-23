@@ -5,11 +5,8 @@ publishDate: 2026-06-06
 issue: printemps-2026
 author: Le comité de rédaction
 ---
-
-## Pourquoi une revue de plus ?
-
 > Dans une ère de commentariat interminable et de blabla incapable, on est en droit de se demander : pourquoi une revue de plus ? C’est la question à laquelle je me propose de répondre.
-> 
+>
 > Vera Paolini
 
 On en peut plus des revues, tous les gauchistes veulent faire leur revue. Certaines sont intéressantes comme Armes de la Critique, d’autres sont un ramassis de blabla pseudo-stalinien ne s’adressant qu’aux anti-trotskistes de la France Insoumise comme Position Revue ou La Cause du Peuple. Tout le monde a droit à sa revue qui donne des perspectives stratégiques au mieux, insulte ceux qu’elle considère comme idiots au pire. Nous aussi voulions participer à cette fête de con.
@@ -20,4 +17,4 @@ Eh bien pour la simple et bonne raison qu’elles ont des standards ! À Crise P
 
 Crise Permanente c’est la revue des adulescents d’extrême-gauche qui vivent sous le seuil de pauvreté, de ceux à qui la boite d’intérim dit « désolée on a genre aucune offre », de ceux qui ont fait la vidéo pour candidater au macdo et qui se sont fait rembarrer six mois après. Crise Permanente c’est la revue des inaptes, des incapables, des branleurs et des merdeux.
 
-Critique littéraire, cinéma, analyse de société, de géopolitique, ici vous retrouverez toutes les logorrhées que vous n’entendez plus au PMU depuis qu’il a été transformé en cookie store supplément matcha. On fume, on boit, on est frustrés sexuellement et on proscrit l’hétérosexualité. 
+Critique littéraire, cinéma, analyse de société, de géopolitique, ici vous retrouverez toutes les logorrhées que vous n’entendez plus au PMU depuis qu’il a été transformé en cookie store supplément matcha. On fume, on boit, on est frustrés sexuellement et on proscrit l’hétérosexualité.
