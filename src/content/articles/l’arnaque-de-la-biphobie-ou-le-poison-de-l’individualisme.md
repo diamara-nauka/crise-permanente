@@ -8,7 +8,7 @@ issue: printemps-2026
 > Michael Kuck et Eddy de Craysson
 
 
-Au commencement, un post
+***<h2 style="text-align:center;">Au commencement, un post</h2>***
 
 Pour résumer, la biphobie est avant tout une affaire de regard, pas une affaire de violence ou de menace existentielle mais bien un problème d’égo. 
 
