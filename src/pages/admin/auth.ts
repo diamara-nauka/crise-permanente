@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { env } from "cloudflare:workers";
 
 // Exécuté à la volée côté serveur (Worker Cloudflare)
 export const prerender = false;
@@ -6,7 +7,6 @@ export const prerender = false;
 export const GET: APIRoute = async ({ locals }) => {
   // Récupération de GITHUB_PAT depuis l'environnement Cloudflare
   const runtime = (locals as any)?.runtime;
-  const env = runtime?.env || process.env;
   const token = env?.GITHUB_PAT;
 
   if (!token) {
