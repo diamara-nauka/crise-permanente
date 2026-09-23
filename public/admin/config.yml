@@ -3,7 +3,7 @@ backend:
   repo: diamara-nauka/crise-permanente
   branch: master
   base_url: https://crise-permanente.diamara-nauka.workers.dev
-  auth_endpoint: auth
+  auth_endpoint: admin/auth
 
 # Configuration générale
 locale: "fr"
