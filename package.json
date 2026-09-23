@@ -11,16 +11,17 @@
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.3",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "wrangler": "^4.136.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260923.1",
-    "typescript": "^7.0.2",
-    "wrangler": "^4.136.3",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.8.1"
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript": "^7.0.2"
   }
 }

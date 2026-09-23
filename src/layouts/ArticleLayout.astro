@@ -21,9 +21,7 @@ const formattedDate = new Intl.DateTimeFormat('fr-FR', {
 ---
 
 <BaseLayout title={title} description={description}>
-  <article
-    class="mx-auto max-w-2xl border-white/20 "
-  >
+  <article class="mx-auto max-w-2xl border-white/20">
     <nav
       class="mb-8 flex items-center gap-2 font-sans text-xs tracking-wider text-white/60 uppercase"
       aria-label="Fil d'Ariane"
@@ -57,7 +55,11 @@ const formattedDate = new Intl.DateTimeFormat('fr-FR', {
       </p>
     </header>
 
-    <slot />
+    <div
+      class="prose prose-invert prose-lg prose-headings:font-heading prose-headings:text-white prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-white/20 prose-h2:pb-2 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:leading-relaxed prose-p:mb-6 prose-blockquote:border-l-white prose-blockquote:text-white/90 prose-blockquote:italic max-w-none font-serif text-white/95"
+    >
+      <slot />
+    </div>
 
     <footer class="mt-12 border-t border-white/20 pt-8">
       <a
