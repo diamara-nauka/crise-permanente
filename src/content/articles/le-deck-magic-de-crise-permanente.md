@@ -8,6 +8,6 @@ description: >-
 
   adversaire avec des cartes uniques qui auront le don de l’irriter.
 publishDate: 2026-09-21
-issue: hiver-2025
+issue: ete-2026
 ---
 ![Larry, il vient de toucher la nuit](/uploads/larry_.png "Larry")

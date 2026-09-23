@@ -9,7 +9,7 @@ description: "En cette deuxième revue de Crise Permanente, je suis dores et dé
   rien à vous dire et je ne veux pas vous parler parce que je suis pas un enculé
   de journaleux."
 publishDate: 2026-03-22
-issue: hiver-2025
+issue: ete-2026
 author: Michael Kuck
 ---
 ## Le vide à combler
